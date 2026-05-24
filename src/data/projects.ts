@@ -126,7 +126,7 @@ const projectsData = {
         "REST APIs",
       ],
       category: "ai" as const,
-      github: "https://github.com/manvithkumar12/trinethra-dashboard",
+      github: "https://github.com/manvithkumar12/Trinethra",
       featured: true,
       problem:
         "Manual supervisor transcript analysis requires significant effort to identify behavioral evidence, evaluate operational maturity, map KPIs, and generate follow-up questions. Reviewing a single transcript can take up to an hour and demands careful interpretation of qualitative feedback.",
@@ -257,7 +257,7 @@ const projectsData = {
         "REST APIs",
       ],
       category: "ai" as const,
-      github: "https://github.com/manvithkumar12/trinethra-dashboard",
+      github: "https://github.com/manvithkumar12/Trinethra",
       featured: true,
       problem:
         "Die manuelle Analyse von Supervisor-Transkripten erfordert erheblichen Aufwand, um Verhaltensnachweise zu identifizieren, die operative Reife zu bewerten, KPIs abzubilden und Folgefragen zu generieren. Die Überprüfung eines einzelnen Transkripts kann bis zu einer Stunde dauern und erfordert eine sorgfältige Interpretation von qualitativem Feedback.",
