@@ -1,4 +1,5 @@
 import { LanguageCode } from "@/locales";
+import { image } from "framer-motion/client";
 
 export interface Project {
   id: string;
@@ -63,6 +64,8 @@ const projectsData = {
     {
       id: "EcoWatt",
       title: "EcoWatt",
+      image: "/ecowatt.png",
+      github: "https://github.com/manvithkumar12/EcoWatt",
       description:
         "EcoWatt is an AI-powered energy forecasting platform that predicts household electricity consumption, costs, and carbon emissions using real-world grid and weather data. It provides personalized recommendations to optimize appliance usage, reduce energy bills, and maximize renewable energy utilization.",
       longDescription: `EcoWatt is an intelligent household energy forecasting and optimization platform designed to help users better understand, predict, and manage their electricity consumption. The project combines artificial intelligence, data analytics, weather intelligence, and real-world European energy grid data to provide actionable insights that reduce energy costs and minimize environmental impact.\n    1) The Problem: People often use electricity without knowing when energy is most expensive, when renewable energy availability is highest, or how their daily habits affect their monthly electricity bills and carbon footprint. As a result, many appliances are operated during peak-demand periods, leading to higher costs and increased pressure on the electrical grid.\n    2) The Solution: EcoWatt addresses this challenge by collecting household information, appliance usage patterns, historical consumption records, weather conditions, and energy market data. Using machine learning algorithms, the system analyzes past behavior and predicts future electricity consumption for upcoming days and weeks.\n    3) Personalized Profiles: Users begin by creating a household profile detailing residents, appliance inventory, and usage frequency. The platform learns consumption behavior and builds personalized energy patterns, combining it with weather forecasts and European grid statistics to improve accuracy.\n    4) Forecasting Engine: Utilizes models like Prophet and Scikit-learn to identify trends, seasonal patterns, and consumption behaviors. The model considers factors including time, temperature, cloud cover, renewable energy generation levels, public holidays, and historical electricity consumption.\n    5) Intelligent Optimization: Instead of simply predicting consumption, the platform actively recommends better times to operate energy-intensive appliances by analyzing electricity prices and renewable energy availability to identify cost-efficient and environmentally friendly operating windows.\n    6) Analytics Dashboard: Visualizes energy-related information through interactive charts. Users can monitor consumption trends, compare forecasted versus actual usage, track estimated electricity expenses, and evaluate their carbon footprint over time.\n    7) What-If Simulation: Allows users to experiment with different appliance schedules and immediately see their impact on projected costs and emissions before making changes to their daily routines.\n    8) Technical Stack: Built using a modern full-stack architecture with React, TypeScript, and Material UI for the frontend. The backend uses Node.js and Express.js, with PostgreSQL for data storage. Machine learning models are developed in Python using Pandas, NumPy, Scikit-learn, and Prophet. External APIs (Open-Meteo, ENTSO-E) provide real-time data.\n    9) Sustainability Impact: Contributes to broader sustainability goals by shifting demand away from peak periods and increasing awareness of carbon emissions, helping users participate in the transition toward a cleaner energy ecosystem.`,
@@ -126,7 +129,7 @@ const projectsData = {
         "REST APIs",
       ],
       category: "ai" as const,
-      github: "https://github.com/manvithkumar12/Trinethra",
+      github: "https://github.com/manvithkumar12/trinethra-dashboard",
       featured: true,
       problem:
         "Manual supervisor transcript analysis requires significant effort to identify behavioral evidence, evaluate operational maturity, map KPIs, and generate follow-up questions. Reviewing a single transcript can take up to an hour and demands careful interpretation of qualitative feedback.",
@@ -147,6 +150,68 @@ const projectsData = {
         "Designing human-in-the-loop AI systems that support rather than replace experts",
         "Structuring and validating AI-generated outputs for real-world workflows",
         "Creating intuitive interfaces for complex analytical processes",
+      ],
+    },
+    {
+      id: "GitHub-Profile-Analyzer",
+      title:
+        "GitHub Profile Analyzer – AI-Powered Developer Profile Evaluation System",
+      image: "/github.png",
+      demo: "https://github-analyzer-production-049f.up.railway.app",
+      github: "https://github.com/manvithkumar12/Github-Analyzer",
+      description:
+        "An AI-powered GitHub profile analysis platform that evaluates developer profiles, repositories, contributions, and activity metrics using machine learning to generate a comprehensive profile score and performance insights.",
+
+      longDescription: `GitHub Profile Analyzer is an intelligent developer assessment platform designed to analyze GitHub profiles and provide data-driven insights into a developer's coding activity, repository quality, and overall GitHub presence. The project combines machine learning, data analytics, and GitHub API integration to generate meaningful profile evaluations and performance scores.\n
+    1) The Problem: Recruiters and developers often rely on manual inspection of GitHub profiles to assess technical activity, project quality, and coding consistency. This process is time-consuming and subjective, making it difficult to compare profiles fairly and efficiently.\n
+    2) The Solution: GitHub Profile Analyzer automates profile evaluation by collecting GitHub user data through the GitHub REST API and analyzing repositories, contribution patterns, follower metrics, and account activity. The platform generates an AI-powered profile score and provides actionable insights about developer performance.\n
+    3) Profile Data Collection: Users enter a GitHub username, and the platform retrieves profile information including repositories, followers, following, gists, account statistics, contribution activity, programming languages, and project metadata.\n
+    4) Machine Learning Scoring Engine: An XGBoost-based machine learning model evaluates multiple profile attributes such as repository quality, contribution frequency, popularity metrics, activity consistency, and coding engagement to generate a custom profile score.\n
+    5) Analytics Dashboard: The platform presents profile insights through interactive dashboards and visualizations. Users can analyze repository distributions, language usage, contribution trends, engagement metrics, and overall profile strength.\n
+    6) Comparative Analysis: Developers can benchmark their GitHub profiles against common industry standards and identify areas for improvement in open-source contributions, project quality, and community engagement.\n
+    7) Performance Recommendations: Based on machine learning predictions, the system provides personalized suggestions to improve profile visibility, repository quality, contribution consistency, and professional GitHub presence.\n
+    8) Technical Stack: Built using Node.js, Express.js, HTML, CSS, JavaScript, and Python. The machine learning pipeline utilizes Pandas, NumPy, Scikit-learn, and XGBoost for feature engineering, model training, and profile scoring. GitHub REST APIs are used for real-time profile data retrieval.\n
+    9) Practical Impact: The platform enables recruiters, students, and developers to quickly assess GitHub profiles, understand coding activity patterns, and make data-driven decisions using automated AI-powered profile analysis.`,
+
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "Python",
+        "XGBoost",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub REST API",
+      ],
+
+      category: "ai" as const,
+      featured: true,
+
+      problem:
+        "Evaluating GitHub profiles manually is time-consuming and subjective. Recruiters and developers often struggle to assess coding activity, repository quality, contribution consistency, and overall developer engagement efficiently.",
+
+      solution:
+        "Developed an AI-powered GitHub profile analysis platform that leverages the GitHub REST API and an XGBoost machine learning model to evaluate developer activity, repository quality, contribution patterns, and engagement metrics. The system generates a custom profile score and provides actionable recommendations for profile improvement.",
+
+      challenges: [
+        "Collecting and processing GitHub profile data from multiple API endpoints",
+        "Engineering meaningful features for developer profile evaluation",
+        "Training and optimizing an XGBoost model for profile scoring",
+        "Handling missing or inconsistent repository and activity data",
+        "Designing intuitive visualizations for profile analytics",
+        "Managing API rate limits and real-time data retrieval",
+      ],
+
+      learnings: [
+        "Machine learning model development using XGBoost and Scikit-learn",
+        "Feature engineering and predictive analytics with Python",
+        "GitHub REST API integration and data processing workflows",
+        "Full-stack web development using Node.js, HTML, CSS, and JavaScript",
+        "Building analytics dashboards and performance visualizations",
+        "Applying AI techniques to developer assessment and profile analysis",
       ],
     },
   ],
@@ -210,6 +275,8 @@ const projectsData = {
       category: "research" as const,
       ongoing: true,
       featured: true,
+      image: "/ecowatt.png",
+      github: "https://github.com/manvithkumar12/EcoWatt",
       problem:
         "Haushalten fehlt oft der Einblick in ihren zukünftigen Stromverbrauch und die Kosten.",
       solution:
@@ -257,7 +324,7 @@ const projectsData = {
         "REST APIs",
       ],
       category: "ai" as const,
-      github: "https://github.com/manvithkumar12/Trinethra",
+      github: "https://github.com/manvithkumar12/trinethra-dashboard",
       featured: true,
       problem:
         "Die manuelle Analyse von Supervisor-Transkripten erfordert erheblichen Aufwand, um Verhaltensnachweise zu identifizieren, die operative Reife zu bewerten, KPIs abzubilden und Folgefragen zu generieren. Die Überprüfung eines einzelnen Transkripts kann bis zu einer Stunde dauern und erfordert eine sorgfältige Interpretation von qualitativem Feedback.",
@@ -278,6 +345,67 @@ const projectsData = {
         "Entwurf von Human-in-the-Loop KI-Systemen, die Experten unterstützen, anstatt sie zu ersetzen",
         "Strukturierung und Validierung von KI-generierten Ausgaben für reale Workflows",
         "Erstellung intuitiver Schnittstellen für komplexe Analyseprozesse",
+      ],
+    },
+    {
+      id: "GitHub-Profile-Analyzer",
+      title:
+        "GitHub Profile Analyzer – KI-gestütztes System zur Bewertung von Entwicklerprofilen",
+      demo: "https://github-analyzer-production-049f.up.railway.app/",
+      description:
+        "Eine KI-gestützte Plattform zur Analyse von GitHub-Profilen, die Entwicklerprofile, Repositories, Beiträge und Aktivitätsmetriken mithilfe von Machine Learning auswertet und einen umfassenden Profil-Score sowie Leistungsanalysen erstellt.",
+      image: "/github.png",
+      github: "https://github.com/manvithkumar12/Github-Analyzer",
+      longDescription: `GitHub Profile Analyzer ist eine intelligente Plattform zur Bewertung von Entwicklerprofilen, die GitHub-Profile analysiert und datenbasierte Einblicke in die Programmieraktivität, Repository-Qualität und die allgemeine GitHub-Präsenz eines Entwicklers liefert. Das Projekt kombiniert Machine Learning, Datenanalyse und die Integration der GitHub-API, um aussagekräftige Profilbewertungen und Leistungskennzahlen zu erzeugen.\n
+1) Das Problem: Recruiter und Entwickler verlassen sich häufig auf die manuelle Überprüfung von GitHub-Profilen, um technische Aktivitäten, Projektqualität und die Konsistenz von Beiträgen zu bewerten. Dieser Prozess ist zeitaufwendig und subjektiv.\n
+2) Die Lösung: GitHub Profile Analyzer automatisiert die Profilbewertung, indem Daten über die GitHub REST API gesammelt und Repositories, Beitragsmuster, Follower-Metriken sowie Kontoaktivitäten analysiert werden. Anschließend wird ein KI-gestützter Profil-Score erstellt.\n
+3) Datenerfassung: Benutzer geben einen GitHub-Benutzernamen ein. Das System ruft Informationen wie Repositories, Follower, Following, Gists, Aktivitätsdaten, Programmiersprachen und Projektmetriken ab.\n
+4) Machine-Learning-Bewertung: Ein XGBoost-Modell bewertet verschiedene Profilmerkmale wie Repository-Qualität, Beitragshäufigkeit, Popularität, Aktivitätskonsistenz und Entwicklerengagement.\n
+5) Analyse-Dashboard: Die Plattform visualisiert Repository-Verteilungen, Sprachstatistiken, Aktivitätstrends und weitere Leistungskennzahlen in interaktiven Dashboards.\n
+6) Vergleichsanalyse: Entwickler können ihre Profile mit allgemeinen Branchenstandards vergleichen und Verbesserungspotenziale identifizieren.\n
+7) Personalisierte Empfehlungen: Basierend auf den Ergebnissen des Machine-Learning-Modells werden Vorschläge zur Verbesserung der GitHub-Präsenz und Projektqualität generiert.\n
+8) Tech-Stack: Entwickelt mit Node.js, Express.js, HTML, CSS, JavaScript und Python. Die Machine-Learning-Pipeline nutzt Pandas, NumPy, Scikit-learn und XGBoost. Die GitHub REST API liefert die Profildaten in Echtzeit.\n
+9) Praktischer Nutzen: Die Plattform unterstützt Recruiter, Studierende und Entwickler bei der schnellen und objektiven Bewertung von GitHub-Profilen durch automatisierte KI-gestützte Analysen.`,
+
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "Python",
+        "XGBoost",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub REST API",
+      ],
+
+      category: "ai" as const,
+      featured: true,
+
+      problem:
+        "Die manuelle Bewertung von GitHub-Profilen ist zeitaufwendig und subjektiv. Recruiter und Entwickler haben oft Schwierigkeiten, Aktivität, Repository-Qualität und Engagement effizient zu bewerten.",
+
+      solution:
+        "Entwicklung einer KI-gestützten Plattform zur Analyse von GitHub-Profilen, die die GitHub REST API und ein XGBoost-Modell nutzt, um Aktivitätsmuster, Repository-Qualität und Entwicklerengagement zu bewerten und einen individuellen Profil-Score zu erzeugen.",
+
+      challenges: [
+        "Erfassung und Verarbeitung von GitHub-Daten aus mehreren API-Endpunkten",
+        "Entwicklung aussagekräftiger Features für die Profilbewertung",
+        "Training und Optimierung eines XGBoost-Modells",
+        "Umgang mit fehlenden oder inkonsistenten Repository-Daten",
+        "Entwurf intuitiver Visualisierungen für Profilanalysen",
+        "Verwaltung von API-Limits und Echtzeit-Datenabrufen",
+      ],
+
+      learnings: [
+        "Entwicklung von Machine-Learning-Modellen mit XGBoost und Scikit-learn",
+        "Feature Engineering und Predictive Analytics mit Python",
+        "Integration und Verarbeitung von Daten über die GitHub REST API",
+        "Full-Stack-Webentwicklung mit Node.js, HTML, CSS und JavaScript",
+        "Aufbau interaktiver Analyse-Dashboards",
+        "Anwendung von KI-Techniken zur Bewertung von Entwicklerprofilen",
       ],
     },
   ],
